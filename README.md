@@ -9,4 +9,4 @@ public class BootSpringBootApplication {
 }
 </code>
 </pre>
-![Alt homework11](/images/homework11.jpg)
+![Alt homework11](./images/homework1.jpg)
