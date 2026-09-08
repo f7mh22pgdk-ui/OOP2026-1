@@ -30,6 +30,9 @@ public class Main {
 
         pi2 = Math.sqrt(12) * pi2;
 
+```
+![Alt homework11](./images/원주율 계산.png)
+
         System.out.println("Madhava = " + pi2);
     }
 }
