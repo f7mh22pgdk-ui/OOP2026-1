@@ -1,0 +1,35 @@
+public class Main {
+    public static void main(String[] args) {
+
+        // Gregory-Leibniz
+        double pi1 = 0.0;
+
+        for (int i = 0; i < 1000000; i++) {
+            if (i % 2 == 0) {
+                pi1 += 4.0 / (2 * i + 1);
+            } else {
+                pi1 -= 4.0 / (2 * i + 1);
+            }
+        }
+
+        System.out.println("Gregory-Leibniz = " + pi1);
+
+
+        // Madhava
+        double pi2 = 0.0;
+
+        for (int i = 0; i < 20; i++) {
+            double term = 1.0 / ((2 * i + 1) * Math.pow(3, i));
+
+            if (i % 2 == 0) {
+                pi2 += term;
+            } else {
+                pi2 -= term;
+            }
+        }
+
+        pi2 = Math.sqrt(12) * pi2;
+
+        System.out.println("Madhava = " + pi2);
+    }
+}
