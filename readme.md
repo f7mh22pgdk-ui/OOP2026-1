@@ -1,0 +1,36 @@
+public class Main {
+    public static void main(String[] args) {
+
+        int score[][] = new int[30][5];
+
+        // 점수 생성
+        for (int i = 0; i < 30; i++) {
+
+            for (int j = 0; j < 4; j++) {
+                score[i][j] = (int)(Math.random() * 101);
+            }
+
+            // 합계
+            score[i][4] =
+                score[i][0] +
+                score[i][1] +
+                score[i][2] +
+                score[i][3];
+        }
+
+
+        // 출력
+        System.out.println("번호\t국어\t영어\t수학\t과학\t합계");
+
+        for (int i = 0; i < 30; i++) {
+
+            System.out.print((i + 1) + "\t");
+
+            for (int j = 0; j < 5; j++) {
+                System.out.print(score[i][j] + "\t");
+            }
+
+            System.out.println();
+        }
+    }
+}
