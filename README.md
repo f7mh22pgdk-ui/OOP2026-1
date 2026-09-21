@@ -50,7 +50,7 @@ class triangle {
 
 ```
 
-![Alt homework11](./images/10x10 텍스트 직각삼각형 네가지 프로그램 작성.png)
+![Alt homework11](./images/10x10텍스트직각삼각형네가지프로그램작성.png)
 
 ### Homework2
 ```java
@@ -70,7 +70,7 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/피보나치수열 20번째 까지.png)
+![Alt homework11](./images/피보나치수열20번째까지.png)
 
 ### Homework3
 ```java
@@ -92,7 +92,7 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/황금비율을 20번째까지 계산.png)
+![Alt homework11](./images/황금비율을20번째까지계산.png)
 
 ### Homework4
 ```java
@@ -109,7 +109,7 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/구구단 샘플 만들기.png)
+![Alt homework11](./images/구구단샘플만들기.png)
 
 ### Homework5
 ```java
@@ -146,7 +146,7 @@ public class Main {
         pi2 = Math.sqrt(12) * pi2;
 
 ```
-![Alt homework11](./images/원주율 계산.png)
+![Alt homework11](./images/원주율계산.png)
 
 ### Homework6
 ```java
@@ -271,4 +271,4 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/국영수과학성적 Math.random().png)
+![Alt homework11](./images/국영수과학성적Math.random().png)
