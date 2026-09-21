@@ -50,7 +50,7 @@ class triangle {
 
 ```
 
-![Alt homework11](./images/10x10 텍스트 직각삼각형 네가지 프로그램 작성.png);
+![Alt homework11](./images/10x10 텍스트 직각삼각형 네가지 프로그램 작성.png)
 
 ### Homework2
 ```java
@@ -178,7 +178,7 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/이항정리계수구하기 .png);
+![Alt homework11](./images/이항정리계수구하기.png)
 
 ### Homework7
 ```java
