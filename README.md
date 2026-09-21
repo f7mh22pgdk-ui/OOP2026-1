@@ -50,9 +50,10 @@ class triangle {
 
 ```
 
-![Alt homework11](./images/10x10 텍스트 직각삼각형 네가지 프로그램 작성.png)
+![Alt homework11](./images/10x10 텍스트 직각삼각형 네가지 프로그램 작성.png);
 
 ### Homework2
+```java
 public class Main {
     public static void main(String[] args) {
         int a = 1;
@@ -72,6 +73,7 @@ public class Main {
 ![Alt homework11](./images/피보나치수열 20번째 까지.png)
 
 ### Homework3
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -93,6 +95,7 @@ public class Main {
 ![Alt homework11](./images/황금비율을 20번째까지 계산.png)
 
 ### Homework4
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -109,6 +112,7 @@ public class Main {
 ![Alt homework11](./images/구구단 샘플 만들기.png)
 
 ### Homework5
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -145,6 +149,7 @@ public class Main {
 ![Alt homework11](./images/원주율 계산.png)
 
 ### Homework6
+```java
         System.out.println("Madhava = " + pi2);
     }
 }public class Main {
@@ -173,9 +178,10 @@ public class Main {
 }
 
 ```
-![Alt homework11](./images/이항정리계수구하기 .png)
+![Alt homework11](./images/이항정리계수구하기 .png);
 
 ### Homework7
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -226,6 +232,7 @@ public class Main {
 ![Alt homework11](./images/소팅(sorting)알고리즘.png)
 
 ### Homework8
+```java
 public class Main {
     public static void main(String[] args) {
 
