@@ -272,3 +272,57 @@ public class Main {
 
 ```
 ![Alt homework11](./images/homework8.png)
+
+### Homework9
+(1.75)₁₀   = (1.11)₂
+(1.625)₁₀  = (1.101)₂
+(1.5625)₁₀ = (1.1001)₂
+(1.875)₁₀  = (1.111)₂
+(13.875)₁₀ = (1101.111)₂
+(45.875)₁₀ = (101101.111)₂
+
+### Homework10
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int array_count = sc.nextInt();
+        int max_value = sc.nextInt();
+        int bin_size = sc.nextInt();
+        int display_scale = sc.nextInt();
+        
+        int hist_size = max_value / bin_size;
+        
+        int[] arr = new int[array_count];
+        int[] hist = new int[hist_size];
+        
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * max_value);
+        }
+        
+        for (int i = 0; i < array_count; i++) {
+            hist[arr[i] / bin_size]++;
+        }
+        
+        for (int i = 0; i < hist_size; i++) {
+            int start = i * bin_size;
+            int end = (i + 1) * bin_size - 1;
+            
+            System.out.printf("%2d~%2d\t", start, end);
+            
+            int count = hist[i] / display_scale;
+            for (int j = 0; j < count; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}
+
+
+
