@@ -327,3 +327,74 @@ public class Main {
 ```
 ![Alt homework11](./images/homework10.png)
 
+### Homework11
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("데이터 개수 입력: ");
+        int array_count = sc.nextInt();
+        
+        int[] arr = new int[array_count];
+        
+   
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+        }
+        
+    
+        System.out.print("생성된 데이터: ");
+        for (int i = 0; i < array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n");
+        
+    
+        double sum = 0;
+        for (int i = 0; i < array_count; i++) {
+            sum += arr[i];
+        }
+        double arithmeticMean = sum / array_count;
+        
+    
+        double prod = 1.0;
+        for (int i = 0; i < array_count; i++) {
+            prod *= arr[i];
+        }
+        double geometricMean = Math.pow(prod, 1.0 / array_count);
+        
+      
+        double harmonicSum = 0;
+        for (int i = 0; i < array_count; i++) {
+            harmonicSum += 1.0 / arr[i];
+        }
+        double harmonicMean = array_count / harmonicSum;
+        
+      
+        int[] sortedArr = arr.clone();
+        Arrays.sort(sortedArr);
+        double median;
+        if (array_count % 2 == 1) {
+            median = sortedArr[array_count / 2];
+        } else {
+            median = (sortedArr[array_count / 2 - 1] + sortedArr[array_count / 2]) / 2.0;
+        }
+        
+      
+        System.out.println("=== [통계 계산 결과] ===");
+        System.out.printf("산술평균 (Arithmetic Mean) : %.4f\n", arithmeticMean);
+        System.out.printf("기하평균 (Geometric Mean)  : %.4f\n", geometricMean);
+        System.out.printf("조화평균 (Harmonic Mean)   : %.4f\n", harmonicMean);
+        System.out.printf("중앙값 (Median)            : %.4f\n", median);
+        
+        sc.close();
+    }
+}
+
+```
+![Alt homework11](./images/homework11.png)
+
