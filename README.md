@@ -442,3 +442,167 @@ public class Main {
 }
 ```
 ![Alt homework11](./images/homework13.png)
+
+
+### Homework14
+```java
+import java.util.Arrays;
+
+public class Main {
+
+    static class Numbers {
+        int num[];
+
+        Numbers(int num[]) {
+            this.num = num;
+        }
+
+      
+        double getTotal() {
+            double sum = 0;
+
+            for (int i = 0; i < num.length; i++) {
+                sum += num[i];
+            }
+
+            return sum;
+        }
+
+    
+        double getArithmaticMean() {
+            return getTotal() / num.length;
+        }
+
+     
+        double getHarmonicMean() {
+            double sum = 0;
+
+            for (int i = 0; i < num.length; i++) {
+                if (num[i] != 0) {
+                    sum += 1.0 / num[i];
+                }
+            }
+
+            return num.length / sum;
+        }
+
+      
+        double getGeometricMean() {
+            double product = 1.0;
+
+            for (int i = 0; i < num.length; i++) {
+                product *= num[i];
+            }
+
+            return Math.pow(product, 1.0 / num.length);
+        }
+
+     
+        int getMedian() {
+            sorting();
+
+            int middle = num.length / 2;
+
+            if (num.length % 2 == 1) {
+                return num[middle];
+            }
+            else {
+                return (num[middle - 1] + num[middle]) / 2;
+            }
+        }
+
+        
+        void sorting() {
+            Arrays.sort(num);
+        }
+
+      
+        void drawHistogram(int start, int end, int binCount) {
+
+            int[] frequency = new int[binCount];
+
+            double interval = (double)(end - start) / binCount;
+
+          
+            for (int i = 0; i < num.length; i++) {
+
+                if (num[i] >= start && num[i] < end) {
+
+                    int index = (int)((num[i] - start) / interval);
+
+                    if (index >= 0 && index < binCount) {
+                        frequency[index]++;
+                    }
+                }
+            }
+
+            System.out.println();
+            System.out.println("도수분포표");
+            System.out.println("-----------------------------");
+
+            for (int i = 0; i < binCount; i++) {
+
+                int binStart = (int)(start + i * interval);
+                int binEnd = (int)(start + (i + 1) * interval);
+
+                System.out.printf("%2d ~ %2d : ", binStart, binEnd - 1);
+
+                for (int j = 0; j < frequency[i]; j++) {
+                    System.out.print("*");
+                }
+
+                System.out.println(" (" + frequency[i] + ")");
+            }
+
+            System.out.println("-----------------------------");
+        }
+
+
+        void display() {
+            System.out.printf("%3d :", num.length);
+
+            for (int i = 0; i < num.length; i++) {
+                System.out.printf("%3d ", num[i]);
+            }
+
+            System.out.println();
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        int size = 100;
+
+        int data[] = new int[size];
+
+     
+        for (int i = 0; i < size; i++) {
+            data[i] = (int)(Math.random() * 100);
+        }
+
+        Numbers obj = new Numbers(data);
+
+        
+        obj.display();
+
+        
+        System.out.printf("Arithmetic Mean : %5.2f\n",
+                obj.getArithmaticMean());
+
+        System.out.printf("Geometric Mean  : %5.2f\n",
+                obj.getGeometricMean());
+
+        System.out.printf("Harmonic Mean   : %5.2f\n",
+                obj.getHarmonicMean());
+
+        System.out.printf("Median          : %d\n",
+                obj.getMedian());
+
+       
+        obj.drawHistogram(0, 100, 10);
+    }
+}
+
+```
+![Alt homework11](./images/homework14.png)
