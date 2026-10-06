@@ -398,3 +398,47 @@ public class Main {
 ```
 ![Alt homework11](./images/homework11.png)
 
+### Homework13
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            String inputString = scanner.nextLine();
+
+            String[] arrOfStr = inputString.split(" ");
+
+            int result = Integer.parseInt(arrOfStr[0]);
+
+            for (int i = 1; i < arrOfStr.length; i += 2) {
+                String operator = arrOfStr[i];
+                int number = Integer.parseInt(arrOfStr[i + 1]);
+
+                
+                if (operator.equals("#")) {
+                    operator = "*";
+                }
+
+                if (operator.equals("+")) {
+                    result = result + number;
+                }
+                else if (operator.equals("-")) {
+                    result = result - number;
+                }
+                else if (operator.equals("*")) {
+                    result = result * number;
+                }
+                else if (operator.equals("/")) {
+                    result = result / number;
+                }
+            }
+
+            System.out.println(result);
+        }
+    }
+}
+```
+![Alt homework11](./images/homework13.png)
